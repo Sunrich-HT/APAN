@@ -1,0 +1,53 @@
+name: Molecular Property Prediction(ligand-based model)
+
+# <------------------------------------------------------------------------------->
+# Data: (Make sure you have preprocessed the data file using utils/data_fetch.py)
+
+train_X: data_index/train_data/ESOL/ESOL_fold_0_train/
+valid_X: data_index/valid_data/ESOL/ESOL_fold_0_valid/
+test_X: data_index/test_data/ESOL/ESOL_fold_0_test/
+
+train_Y: data_index/train_data/ESOL/ESOL_fold_0_train-Y.npy
+valid_Y: data_index/valid_data/ESOL/ESOL_fold_0_valid-Y.npy
+test_Y: data_index/test_data/ESOL/ESOL_fold_0_test-Y.npy
+
+# <------------------------------------------------------------------------------->
+# task type
+Regression: True
+Classification: False
+use_distance: True
+
+
+
+# <------------------------------------------------------------------------------->
+# Hparams (If the model is ligand-based, please set the pocket_atoms to the value of the ligand_atoms)
+
+msa_blocks_num: 0
+evo_blocks_num: 1
+output_dim: 1
+pocket_atoms: 100
+ligand_atoms: 100
+embed_dims: 16
+hidden_dims: 300
+attention_heads: 8
+# pair_len: 79
+
+scheduler: cosine #cosine constant
+learning_rate: 0.001
+batch_size: 32
+weight_decay: 0.011
+warmup_steps: 1
+accum_steps: 10
+grad_norm: 2.5
+best_loss: False
+log_wandb: True
+early_stopping_step: 30
+save_checkpoints: True
+training_steps: 250
+max_epochs: 9999
+
+
+
+# <------------------------------------------------------------------------------->
+
+
