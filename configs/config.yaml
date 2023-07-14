@@ -13,8 +13,8 @@ test_Y: data_index/test_data/ESOL/ESOL_fold_0_test-Y.npy
 
 # <------------------------------------------------------------------------------->
 # task type
-Regression: True
-Classification: False
+Regression: False
+Classification: True
 use_distance: True
 
 
