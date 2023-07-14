@@ -69,7 +69,7 @@ if __name__ == '__main__':
         help='esol, freesolv, ...')
     parser.add_argument('--config', type=Path, default='configs/config.yaml',
         help='Use the following config for hparams.')
-    parser.add_argument('--data', type=Path, default='new_data/',
+    parser.add_argument('--data', type=Path, default='data/',
         help='data path')    
     parser.add_argument('--checkpoint', type=str,
         help='Warm-start from a previous fine-tuned checkpoint.')
