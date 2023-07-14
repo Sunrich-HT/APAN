@@ -15,6 +15,9 @@ pytorch-ignite
 transformers==2.11.0
 cupy-cuda113
 deepchem
+einops
+pyyaml
+wandb
 ```
 ## Data preprocessing
 ```bash
