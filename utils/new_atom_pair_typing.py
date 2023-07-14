@@ -304,7 +304,7 @@ def do_pair_encoding(args, path, fold, filename, set_name):
                 dij_matrix.append(dij)
                 label = [float(x) if x != '' else None for x in context[3:]]
             else:
-                label = [float(x) if x != '' else None for x in context[0:-2]]
+                label = [float(x) if x != '' else None for x in context[1:]]
             Y.append(label)
             adj_list.append(padded_array)
     
