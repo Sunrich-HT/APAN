@@ -22,12 +22,14 @@ apex
 ```
 ## Data preprocessing
 ```bash
+python utils/data_fetch.py --dataset-type classification --task bbbp
 python utils/data_fetch.py --dataset-type regression --task esol 
 ```
 
 ## Train
 
 ```bash
+python train.py --config configs/config.yaml --task bbbp --fold 0 --mp
 python train.py --config configs/config.yaml --task esol --fold 0 --mp
 ##distributed
 CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 train.py --config configs/config.yaml --task esol --fold 0 --mp --distributed
