@@ -18,6 +18,7 @@ deepchem
 einops
 pyyaml
 wandb
+apex
 ```
 ## Data preprocessing
 ```bash
