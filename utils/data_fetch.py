@@ -27,7 +27,7 @@ if __name__ == '__main__':
                         help='dataset type.')            
     parser.add_argument('--data-index', type=Path, default='data_index/',
     help='Path of the divided data')
-    parser.add_argument('--saved-dir', type=Path, default='new_scaf_data/',
+    parser.add_argument('--saved-dir', type=Path, default='data/',
     help='The path to save the data after atom-pair-encoding')
     
     parser.add_argument('--separate_train_path', type=str,
